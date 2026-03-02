@@ -336,10 +336,17 @@
     </footer>
 
     <script>
-        const key = 'vicky-highlight-views';
-        const count = (parseInt(localStorage.getItem(key) || '0')) + 1;
-        localStorage.setItem(key, count);
-        document.getElementById('view-count').textContent = count;
+        const localKey = 'vicky-highlight-views';
+        fetch('https://api.counterapi.dev/v1/vicky-hockey-highlights/pageviews/up')
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('view-count').textContent = data.count;
+            })
+            .catch(() => {
+                const count = (parseInt(localStorage.getItem(localKey) || '0')) + 1;
+                localStorage.setItem(localKey, count);
+                document.getElementById('view-count').textContent = count;
+            });
     </script>
 </body>
 </html>
