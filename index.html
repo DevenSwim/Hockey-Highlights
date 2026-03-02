@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hockey Videos - Vicky Swim</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0a0e17;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0d1b2a 0%, #1b2a4a 50%, #0d1b2a 100%);
+            border-bottom: 4px solid #3a8fd9;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(58, 143, 217, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+            background: linear-gradient(to right, #ffffff, #a8d4f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #3a8fd9;
+            font-weight: 600;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+
+        .accent-line {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, #3a8fd9, #a8d4f5);
+            margin: 16px auto;
+            border-radius: 2px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 500px), 1fr));
+            gap: 30px;
+            padding: 40px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: linear-gradient(145deg, #111827, #1a2332);
+            border: 1px solid #1e3a5f;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(58, 143, 217, 0.2);
+            border-color: #3a8fd9;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .card-body {
+            padding: 20px 24px 24px;
+        }
+
+        .card-body h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #e8f0fe;
+        }
+
+        .card-body p {
+            font-size: 0.95rem;
+            color: #8aa4c0;
+            line-height: 1.5;
+        }
+
+        .tag {
+            display: inline-block;
+            background: rgba(58, 143, 217, 0.15);
+            color: #5bb8f5;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #3d5a80;
+            font-size: 0.85rem;
+            border-top: 1px solid #1e3a5f;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.6rem;
+                letter-spacing: 1px;
+            }
+
+            .subtitle {
+                font-size: 0.85rem;
+                letter-spacing: 3px;
+            }
+
+            .grid {
+                padding: 20px 16px;
+                gap: 20px;
+            }
+
+            .card-body {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Hockey Videos - Vicky Swim</h1>
+            <div class="accent-line"></div>
+            <p class="subtitle">For Maddie Hartman, Premier Ice Prospects</p>
+        </div>
+    </header>
+
+    <main class="grid">
+        <div class="card">
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/WL7epxeMJoo"
+                    title="Highlight Reel 1"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="card-body">
+                <h2>Video from 2012 Roses tournament</h2>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/Dk8L3fisZ9A"
+                    title="Highlight Reel 2"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="card-body">
+                <h2>Video from the World Selects</h2>
+            </div>
+        </div>
+        <div class="card">
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/OYUK0vtjZTI"
+                    title="Highlight Reel 3"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="card-body">
+                <h2>Video from St. Mary's Game 2/4/2026</h2>
+            </div>
+        </div>
+        <div class="card">
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/hgGrNmw7Gok"
+                    title="Highlight Reel 4"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="card-body">
+                <h2>Video from Assabet U14 Major 1 vs. CT. Polar Bears - December 2025</h2>
+            </div>
+        </div>
+        <div class="card">
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/EmGpVwMavDY"
+                    title="Highlight Reel 5"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="card-body">
+                <h2>Video 2 from Assabet U14 Major 1 vs. CT. Polar Bears - December 2025</h2>
+            </div>
+        </div>
+        <div class="card">
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/mKpz_Z-AEbo"
+                    title="Highlight Reel 6"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="card-body">
+                <h2>Video from St. Mary's Varsity vs. Reading - 1/24/2026</h2>
+            </div>
+        </div>
+        <div class="card">
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/h1rz7zektl4"
+                    title="Highlight Reel 7"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="card-body">
+                <h2>Assabet U14 Major 1 vs Islanders 2/8/2026</h2>
+            </div>
+        </div>
+        <div class="card">
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/N-5hred7qtc"
+                    title="Highlight Reel 8"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="card-body">
+                <h2>St. Mary's Varsity vs. Reading 2/17/2026 2 on 1 pass</h2>
+            </div>
+        </div>
+        <div class="card">
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/K0VWXTYn0eo"
+                    title="Highlight Reel 9"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="card-body">
+                <h2>St. Mary's Varsity vs. Winchester Game Winning Goal - December 2026</h2>
+            </div>
+        </div>
+        <div class="card">
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/0JdjiA4fKw0"
+                    title="Highlight Reel 10"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="card-body">
+                <h2>Assabet U14 Major 1 vs. Islanders - State Quarterfinals - 2/22/2026 - Vicky Screens Goalie on Power Play</h2>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+    </footer>
+</body>
+</html>
